@@ -19,8 +19,8 @@ const ReactUIWalletModalProviderDynamic = dynamic(
 const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
     const { autoConnect } = useAutoConnect();
     const { networkConfiguration } = useNetworkConfiguration();
-    const network = networkConfiguration as WalletAdapterNetwork;
-    const endpoint = useMemo(() => clusterApiUrl(network), [network]);
+    const network = "devnet" as WalletAdapterNetwork;
+    const endpoint = "https://fabled-tame-pallet.solana-devnet.quiknode.pro/0b2067b90332774252256e72380c4390dbef77d7/"
 
     console.log(network);
 
